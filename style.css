@@ -14,7 +14,6 @@
 
 body {
     height: 100vh;
-    /* background-color: #4070F4; */
 }
 
 ::selection {
@@ -22,14 +21,54 @@ body {
     color: var(--secondary-text-color);
 }
 
+.marquee{
+    position: relative;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    font-size: 29px;
+    text-transform: uppercase;
+    overflow: hidden;
+}
+
+.marquee_inner{
+    display: flex;
+    width: fit-content;
+    flex:auto;
+    flex-direction: row;
+}
+
+.marquee_part{
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    padding: 0 4px;
+}
+ .arrow{
+    width: 30px;
+    height: 33px;
+    margin: 0 1rem;
+ }
+
+ .arrow {
+    width: 30px;
+    height: 30px;
+    margin: 0 1rem;
+    transition: transform 0.2s ease-out; /* Add transition for smooth animation */
+}
+
+.arrow:hover {
+    transform: scale(1.2); /* Scale up slightly on hover */
+}
+
 nav {
     display: flex;
     align-items: center;
-    /* justify-content: space-between; Ensures logo and nav items are spaced evenly */
-    border-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
     background-color: #fff;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    padding: 0 20px; /* Added padding to adjust spacing */
+    padding: 0 20px;
     gap: 4rem;
 }
 
