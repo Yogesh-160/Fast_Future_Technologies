@@ -145,6 +145,64 @@ nav {
     box-shadow: 0 0 5px rgba(64, 112, 244, 0.3); /* Shadow effect */
     transition: 0.3s;
 }
+
+.nav-content {
+    display: flex;
+    margin-top: 1rem;
+    list-style: none;
+    position: relative;
+    gap: 2rem; /* Adjust the gap between nav items */
+    text-align: center;
+}
+
+.link-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 76px;
+    text-decoration: none;
+    position: relative;
+}
+
+.link-icon {
+    font-size: 25px;
+    color: #999;
+    transition: color 0.3s;
+}
+
+.link-item.active .link-icon {
+    color: var(--icon-color-text);
+}
+
+.link-item .link-icon:hover {
+    color: var(--icon-color-text);
+}
+
+.link-text {
+    font-size: 12px;
+    font-weight: 500;
+    color: #999;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.link-item.active .link-text {
+    opacity: 1;
+    color: var(--icon-color-text);
+}
+
+.indicator {
+    position: absolute;
+    bottom: -4px; /* Adjust positioning */
+    left: 0;
+    height: 3px;
+    width: 76px;
+    background-color: var(--icon-color-text);
+    box-shadow: 0 0 5px rgba(64, 112, 244, 0.3); /* Shadow effect */
+    transition: 0.3s;
+}
 /* Search Bar CSS */
 .search-login_btn{
     display: flex;
