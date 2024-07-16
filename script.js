@@ -29,3 +29,4 @@ linkItems.forEach((linkItem, index) => {
         indicator.style.width = `${linkItem.offsetWidth}px`;
     });
 });
+
