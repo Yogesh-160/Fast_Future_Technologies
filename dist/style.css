@@ -1,20 +1,15 @@
-:root {
-    --primary-background-color: rgb(167, 231, 255);
-    --primary-text-color: rgb(0, 0, 0);
-    --secondary-text-color: rgb(255, 255, 255);
-    --icon-color-text: #4070F4;
-    --white-text-color: #fff;
-}
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Source Sans 3", sans-serif;;
 }
 
 body {
     height: 100vh;
-    background-color: #0d0c22;
+    /* background-color: #0d0c22; */
     padding-top: 120px; /* Add padding to prevent content from being hidden under fixed navbar and marquee */
 }
 
@@ -23,45 +18,12 @@ body {
     color: var(--secondary-text-color);
 }
 
-.marquee {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: black;
-    color: white;
-    font-weight: 600;
-    font-size: 29px;
-    text-transform: uppercase;
-    overflow: hidden;
-    z-index: 1000; /* Ensure marquee stays on top */
-    padding: 10px 0; /* Adjust padding as needed */
-}
-
-.marquee_inner {
-    display: flex;
-    width: fit-content;
-    flex: auto;
-    flex-direction: row;
-}
-
 .marquee_part {
     display: flex;
     align-items: center;
     flex-shrink: 0;
     padding: 0 4px;
 }
-
-.arrow {
-    width: 30px;
-    height: 33px;
-    margin: 0 1rem;
-    transition: transform 0.2s ease-out;
-}
-
-.arrow:hover {
-    transform: scale(1.2);
-}
-
 
 nav {
     display: flex;

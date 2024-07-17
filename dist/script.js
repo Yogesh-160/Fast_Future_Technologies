@@ -1,10 +1,7 @@
 const linkItems = document.querySelectorAll('.link-item');
 
 // Header Scroller Feature
-let currentScroll = 0;
-let isScrollingDown = true;
 
-let arrows = document.querySelectorAll(".arrow");
 
 let tween = gsap.to(".marquee_part",{
     xPercent : -100,
