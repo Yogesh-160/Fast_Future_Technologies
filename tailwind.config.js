@@ -9,6 +9,7 @@ module.exports = {
         'secondary-text-color' : 'rgb(255, 255, 255)',
         'icon-color-text': '#4070F4',
         'white-text-color': '#fff',
+        'background-cursor-color': '#4CAAE4'
       },
     },
   },
