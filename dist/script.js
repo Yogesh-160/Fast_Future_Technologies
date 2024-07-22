@@ -38,3 +38,17 @@ document.addEventListener('mousemove', (e) => {
     cursorBlur.style.top = `${e.clientY}px`;
     cursorBlur.style.left = `${e.clientX}px`;
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const navbar = document.querySelector("nav");
+
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 60) { // Change the value to control when the effect starts
+            navbar.classList.add("scrolled");
+        } else {
+            navbar.classList.remove("scrolled");
+        }
+    });
+});
+
