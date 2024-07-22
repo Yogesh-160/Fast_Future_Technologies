@@ -14,7 +14,7 @@ body {
     flex-direction: column;
     gap: 10px;
     padding: 55px;
-    border-radius: 8px;
+    border-radius: 50px;
 }
 
 .title {
