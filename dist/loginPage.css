@@ -1,0 +1,123 @@
+body {
+    background-image: url(./Images/students.jpeg);
+    background-size: cover;
+    cursor: none;
+}
+
+.form-control {
+    margin: auto;
+    margin-top: 100px;
+    background-color: #ffffff;
+    box-shadow: 0 15px 25px lightblue;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 55px;
+    border-radius: 8px;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.input-field {
+    position: relative;
+    width: 100%;
+}
+
+.input {
+    margin-top: 15px;
+    width: 100%;
+    outline: none;
+    border-radius: 8px;
+    height: 45px;
+    border: 1.5px solid #ecedec;
+    background: transparent;
+    padding-left: 10px;
+}
+
+.input:focus {
+    border: 1.5px solid #2d79f3;
+}
+
+.input-field .label {
+    position: absolute;
+    top: 25px;
+    left: 15px;
+    color: #ccc;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.input-field .input:focus ~ .label,
+.input-field .input:valid ~ .label {
+    top: 5px;
+    left: 5px;
+    font-size: 12px;
+    color: #2d79f3;
+    background-color: #ffffff;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.submit-btn {
+    height: 55px;
+    border-radius: 11px;
+    border: 0;
+    outline: none;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    background: linear-gradient(180deg, lightblue 0%, rgb(107, 193, 221) 50%, lightblue 100%);
+    box-shadow: 0px 0px 0px 0px #ffffff, 0px 0px 0px 0px rgb(117, 188, 212);
+    transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
+    cursor: pointer;
+    flex: 1;
+}
+
+.submit-btn:hover {
+    box-shadow: 0px 0px 0px 2px #ffffff, 0px 0px 0px 4px rgb(161, 207, 222);
+}
+
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 2rem;
+}
+
+.buttons .submit-btn {
+    flex: 1;
+    width: 50%;
+}
+
+/*Styles for the custom cursor */
+.cursor {
+    width: 20px;
+    height: 20px;
+    background-color: #4CAAE4;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 1000;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
+    
+}
+
+.cursor-blur {
+    width: 90px;
+    height: 90px;
+    background-color: #4CAAE4;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 999;
+    transform: translate(-50%, -50%);
+    filter: blur(20px);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
+    
+}
