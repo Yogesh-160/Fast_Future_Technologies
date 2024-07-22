@@ -1,0 +1,92 @@
+body{
+    background-image: url('./Images/Coding-students.jpeg');
+    background-size: cover;
+    cursor: none;
+}
+
+.login {
+    max-width: 580px;
+    background-color: #ffffff;
+    margin:auto;
+    margin-top: 60px;
+    padding: 3rem;
+    border: 1px whitesmoke;
+    border-radius: 50px;
+  }
+  .hader {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+  }
+  .hader p {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    color: #706b6b;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  form input {
+    height: 40px;
+    outline: none;
+    border: 1px solid #cccccc;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 8px;
+  }
+  form input[type="button"] {
+    background-color: lightblue;
+    box-shadow: 0 15px 25px lightblue;
+    color: #ffffff;
+    font-size: 17px;
+  }
+
+  form input[type="button"]:hover{
+    transition: all ease-in-out 0.3s;
+    box-shadow: 0px 0px 0px 2px #ffffff, 0px 0px 0px 4px rgb(161, 207, 222);
+  }
+
+  form span {
+    text-align: center;
+    font-size: 16px;
+    padding-top: 10px;
+    color: #706b6b;
+  }
+  form span a {
+    text-decoration: none;
+    color: rgba(36, 36, 207, 0.671);
+    font-weight: 500;
+  }
+  
+
+  /*Styles for the custom cursor */
+.cursor {
+    width: 20px;
+    height: 20px;
+    background-color: #4CAAE4;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 1000;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
+    
+}
+
+.cursor-blur {
+    width: 90px;
+    height: 90px;
+    background-color: #4CAAE4;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 999;
+    transform: translate(-50%, -50%);
+    filter: blur(20px);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
+    
+}
