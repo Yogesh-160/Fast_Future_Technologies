@@ -187,7 +187,7 @@ nav {
     overflow: hidden;
     box-shadow: 0 0 0 0 transparent;
     transition: all 0.2s ease-in;
-    cursor: pointer;
+    cursor: none;
 }
 
 .login:hover {
