@@ -4,13 +4,13 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Source Sans 3", sans-serif;;
+    font-family: "Source Sans 3", sans-serif;
+    cursor: none;
 }
 
 body {
     height: 100vh;
-    /* background-color: #0d0c22; */
-    padding-top: 120px; /* Add padding to prevent content from being hidden under fixed navbar and marquee */
+    padding-top: 120px; 
 }
 
 ::selection {
@@ -28,17 +28,16 @@ body {
 nav {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Ensure space between elements */
-    position: fixed; /* Make the navbar fixed */
-    top: 60px; /* Position it just below the marquee */
-    width: 100%; /* Full width */
-    height: 60px; /* Adjust height as needed */
+    justify-content: space-between;
+    position: fixed;
+    top: 60px; 
+    width: 100%; 
+    height: 60px; 
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
-    background-color: rgba(255, 255, 255, .1);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     padding: 0 20px;
-    z-index: 999; /* Ensure it stays above content but below marquee */
+    z-index: 999; 
 }
 
 .logo-container {
@@ -65,6 +64,12 @@ nav {
     text-align: center;
 }
 
+/* Add transition to the navbar */
+nav {
+    background-color: transparent;
+    transition: background-color 0.5s ease; 
+}
+
 .link-item {
     display: flex;
     flex-direction: column;
@@ -78,7 +83,7 @@ nav {
 
 .link-icon {
     font-size: 25px;
-    color: #999;
+    color: #856f6f;
     transition: color 0.3s;
 }
 
@@ -100,7 +105,10 @@ nav {
 
 .link-item.active .link-text {
     opacity: 1;
-    color: var(--icon-color-text);
+    color: rgba(0, 0, 0, 0.71);
+    font-weight: 700;
+    font-size: 1rem;
+   
 }
 
 .indicator {
@@ -119,8 +127,8 @@ nav {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    gap: 4rem;
-    margin-left: 5rem;
+    gap: 6rem;
+    margin-left: 8rem;
 }
 
 .group {
@@ -134,8 +142,8 @@ nav {
     width: 100%;
     height: 40px;
     line-height: 28px;
-    padding: 0 10rem;
-    padding-left: 8.5rem;
+    padding: 0 2rem;
+    padding-left: 2.5rem;
     border: 2px solid transparent;
     border-radius: 8px;
     outline: none;
@@ -170,16 +178,16 @@ nav {
     padding: 10px 20px;
     border-radius: 7px;
     border: 1px solid rgb(61, 106, 255);
-    font-size: 14px;
+    font-size: 16px;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 800;
     letter-spacing: 2px;
     background: transparent;
     color: var(--icon-color-text);
     overflow: hidden;
     box-shadow: 0 0 0 0 transparent;
     transition: all 0.2s ease-in;
-    cursor: pointer;
+    cursor: none;
 }
 
 .login:hover {
@@ -206,6 +214,92 @@ nav {
     box-shadow: 0 0 50px 30px #fff;
     transform: skewX(-20deg);
 }
+/*Styles for the custom cursor */
+.cursor {
+    width: 20px;
+    height: 20px;
+    background-color: #4CAAE4;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 1000;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
+    mix-blend-mode: difference;
+}
+
+.cursor-blur {
+    width: 90px;
+    height: 90px;
+    background-color: #4CAAE4;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 999;
+    transform: translate(-50%, -50%);
+    filter: blur(20px);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
+    mix-blend-mode:difference;
+}
+
+video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#main {
+    position: relative;
+    background-color: rgba(0,0,0, 0.60);
+}
+
+#page1 {
+    height: 98vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+}
+
+#page1 h1 {
+    font-size: 140px;
+    font-weight: 900;
+    position: relative;
+    color: whitesmoke;
+}
+
+#page1 h1::before {
+    content: "EAT. CODE. ENJOY.";
+    position: absolute;
+    color: black;
+    top: -6px;
+    left: -6px;
+    -webkit-text-stroke: 2px #4CAAE4;
+    z-index: -1;
+}
+
+#page1 h2 {
+    font-size: 33px;
+    font-weight: 800;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: whitesmoke;
+}
+
+#page1 p {
+    font-size: 17px;
+    font-weight: 500;
+    width: 45.3%;
+    color: whitesmoke;
+}
 
 @keyframes sh02 {
     from {
@@ -227,7 +321,6 @@ nav {
     box-shadow: 0 0 0 0 transparent;
     transition: box-shadow 0.2s ease-in;
 }
-
 /* Responsive Design */
 
 /* Extra Small Devices, Phones */

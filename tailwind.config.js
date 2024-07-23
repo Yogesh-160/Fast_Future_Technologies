@@ -1,6 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./dist/index.html'],
+  content: [
+    './dist/index.html',
+    './dist/loginPage.html',
+  ],
   theme: {
     extend: {
       colors : {
@@ -9,6 +12,7 @@ module.exports = {
         'secondary-text-color' : 'rgb(255, 255, 255)',
         'icon-color-text': '#4070F4',
         'white-text-color': '#fff',
+        'background-cursor-color': '#4CAAE4'
       },
     },
   },

@@ -26,28 +26,36 @@
 </head>
 
 <body>
+    <div id="cursor" class="cursor"></div>
+    <div id="cursor-blur" class="cursor-blur"></div>
     <div
         class="fixed top-0 w-full bg-black text-white-text-color font-semibold text-[29px] uppercase overflow-hidden z-50 py-2 px-0">
         <div class="flex w-[fit-content] flex-auto flex-row">
             <div class="marquee_part">
                 Hello Lorem, ipsum dolor.
-                <div class="w-7 h-8 mt-[-.8rem] mx-4 transition transform ease-out hover:scale-[1.2] hover-delay-2000 "><i class="ri-arrow-left-line"></i></div>
+                <div class="w-7 h-8 mt-[-.8rem] mx-4 transition transform ease-out hover:scale-[1.2] hover-delay-2000 ">
+                    <i class="ri-arrow-left-line"></i></div>
             </div>
             <div class="marquee_part">
                 Hello Lorem, ipsum dolor.
-                <div class="w-7 h-8 mt-[-.8rem] mx-4 transition transform delay-2000 ease-out hover:scale-[1.2]"><i class="ri-arrow-left-line"></i></div>
+                <div class="w-7 h-8 mt-[-.8rem] mx-4 transition transform delay-2000 ease-out hover:scale-[1.2]"><i
+                        class="ri-arrow-left-line"></i></div>
             </div>
             <div class="marquee_part">
                 Hello Lorem, ipsum dolor.
-                <div class="w-7 h-8 mt-[-.8rem] mx-4 transition transform delay-2000 ease-out hover:scale-[1.2]"><i class="ri-arrow-left-line"></i></div>
+                <div class="w-7 h-8 mt-[-.8rem] mx-4 transition transform delay-2000 ease-out hover:scale-[1.2]"><i
+                        class="ri-arrow-left-line"></i></div>
             </div>
             <div class="marquee_part">
                 Hello Lorem, ipsum dolor.
-                <div class="w-7 h-8 mt-[-.8rem] mx-4 transition transform delay-200 ease-out hover:scale-[1.2]"><i class="ri-arrow-left-line"></i></div>
+                <div class="w-7 h-8 mt-[-.8rem] mx-4 transition transform delay-200 ease-out hover:scale-[1.2]"><i
+                        class="ri-arrow-left-line"></i></div>
             </div>
 
         </div>
     </div>
+    <video src="https://videos.pexels.com/video-files/7217874/7217874-uhd_2732_1440_30fps.mp4" muted autoplay loop></video>
+    <div id="main">
     <nav class="nav">
         <div class="logo-container">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKNTxErwQ_zuTUsGsrl882rlO5VSFW02bq0A&s"
@@ -93,43 +101,8 @@
             </li>
             <span class="indicator"></span>
         </ul>
-        <!--sidebar menu-->
+        <div class="search-login_btn" onclick="window.location.href='./loginPage.html'">
 
-        <ul class="nav-content">
-            <li class="nav-list hideONMobile">
-                <a href="#" class="link-item active">
-                    <i class="ri-home-4-line link-icon"></i>
-                    <span class="link-text">Home</span>
-                </a>
-            </li>
-            <li class="nav-list hideONMobile">
-                <a href="#" class="link-item">
-                    <i class="ri-play-circle-fill link-icon"></i>
-                    <span class="link-text">Content</span>
-                </a>
-            </li>
-            <li class="nav-list hideONMobile">
-                <a href="#" class="link-item">
-                    <i class="ri-bar-chart-fill link-icon"></i>
-                    <span class="link-text">Lorem</span>
-                </a>
-            </li>
-            <li class="nav-list hideONMobile">
-                <a href="#" class="link-item">
-                    <i class="ri-message-3-line link-icon"></i>
-                    <span class="link-text">Comments</span>
-                </a>
-            </li>
-
-            <li class="nav-list hideONMobile">
-                <a href="#" class="link-item">
-                    <i class="ri-user-fill link-icon"></i>
-                    <span class="link-text">Profile</span>
-                </a>
-            </li>
-            <span class="indicator"></span>
-        </ul>
-        <div class="search-login_btn hideONMobile">
             <div class="group">
                 <svg viewBox="0 0 24 24" aria-hidden="true" class="icon">
                     <g>
@@ -145,16 +118,13 @@
                 Login
             </button>
         </div>
-
-        <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px"
-                    fill="bg-black">
-                    <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
-                </svg></a></li>
     </nav>
-    <div>
-
+    <div id="page1">
+        <h1>EAT. CODE. ENJOY.</h1>
+        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad culpa, sint corporis beatae eaque, voluptate tenetur maiores natus omnis sit reiciendis temporibus consequatur minima quo exercitationem, adipisci aliquam dignissimos. Fuga earum blanditiis doloribus totam velit veniam, tempora in impedit pariatur provident quibusdam quisquam odio minima ab itaque similique, incidunt temporibus?</p>
     </div>
-
+</div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 
 

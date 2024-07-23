@@ -27,14 +27,29 @@ linkItems.forEach((linkItem, index) => {
     });
 });
 
-/* sidebar menu  */
+// Custom Cursor
+document.addEventListener('mousemove', (e) => {
+    const cursor = document.getElementById('cursor');
+    const cursorBlur = document.getElementById('cursor-blur');
+    
+    cursor.style.top = `${e.clientY}px`;
+    cursor.style.left = `${e.clientX}px`;
+    
+    cursorBlur.style.top = `${e.clientY}px`;
+    cursorBlur.style.left = `${e.clientX}px`;
+});
 
-function showSidebar(){
-    const sidebar = document.querySelector('.sidebar')
-    sidebar.style.display = 'flex'
-}
 
-function hideSidebar(){
-    const sidebar = document.querySelector('.sidebar')
-    sidebar.style.display = 'none'
-}
+document.addEventListener("DOMContentLoaded", function () {
+    const navbar = document.querySelector("nav");
+
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 60) { // Change the value to control when the effect starts
+            navbar.classList.add("scrolled");
+        } else {
+            navbar.classList.remove("scrolled");
+        }
+    });
+});
+
+
