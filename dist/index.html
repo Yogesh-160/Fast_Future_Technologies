@@ -62,7 +62,12 @@
                 alt="Logo" class="logo">
             <p class="logo-text">Lorem</p>
         </div>
-        <ul class="nav-content">
+
+        <!--sidebar menu-->
+        <ul class="sidebar">
+            <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="black">
+                <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+            </svg></a></li>
             <li class="nav-list">
                 <a href="#" class="link-item active">
                     <i class="ri-home-4-line link-icon"></i>
@@ -87,7 +92,7 @@
                     <span class="link-text">Comments</span>
                 </a>
             </li>
-
+        
             <li class="nav-list">
                 <a href="#" class="link-item">
                     <i class="ri-user-fill link-icon"></i>
@@ -97,6 +102,7 @@
             <span class="indicator"></span>
         </ul>
         <div class="search-login_btn" onclick="window.location.href='./loginPage.html'">
+
             <div class="group">
                 <svg viewBox="0 0 24 24" aria-hidden="true" class="icon">
                     <g>
@@ -108,7 +114,7 @@
                 <input class="input" type="search" placeholder="Search" />
             </div>
 
-            <button class="login">
+            <button class="login hideONMobile">
                 Login
             </button>
         </div>
