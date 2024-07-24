@@ -138,9 +138,10 @@ nav {
     left: 0;
     height: 3px;
     width: 76px;
-    background-color: var(--icon-color-text);
+    background-color: lightgray;
     box-shadow: 0 0 5px rgba(64, 112, 244, 0.3);
     transition: 0.3s;
+    border-radius: 10px;
 }
 
 /* Search Bar CSS */
