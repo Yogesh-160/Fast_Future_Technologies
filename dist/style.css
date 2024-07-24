@@ -38,6 +38,9 @@ nav {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     padding: 0 20px;
     z-index: 999; 
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
 }
 
 .logo-container {
@@ -47,13 +50,18 @@ nav {
 }
 
 .logo {
-    width: 50px;
+    width: 55px;
     height: auto;
+    margin-left: -1rem;
 }
 
 .logo-text {
     font-size: 18px;
     font-weight: bold;
+    color: whitesmoke;
+    margin-left: -0.5rem;
+    line-height: 1.1rem;
+    text-transform: uppercase;
 }
 
 .nav-content {
@@ -83,29 +91,29 @@ nav {
 
 .link-icon {
     font-size: 25px;
-    color: #856f6f;
+    color: whitesmoke;
     transition: color 0.3s;
 }
 
 .link-item.active .link-icon {
-    color: var(--icon-color-text);
+    color: lightblue;
 }
 
 .link-item .link-icon:hover {
-    color: var(--icon-color-text);
+    color: lightgray;
 }
 
 .link-text {
     font-size: 12px;
     font-weight: 500;
-    color: #999;
+    color: whitesmoke;
     opacity: 0;
     transition: opacity 0.3s;
 }
 
 .link-item.active .link-text {
     opacity: 1;
-    color: rgba(0, 0, 0, 0.71);
+    color: white;
     font-weight: 700;
     font-size: 1rem;
    
@@ -182,12 +190,15 @@ nav {
     text-transform: uppercase;
     font-weight: 800;
     letter-spacing: 2px;
-    background: transparent;
-    color: var(--icon-color-text);
+    margin-right: 4rem;
+    color: whitesmoke;
     overflow: hidden;
     box-shadow: 0 0 0 0 transparent;
     transition: all 0.2s ease-in;
     cursor: none;
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
 }
 
 .login:hover {
@@ -254,6 +265,7 @@ video {
 
 #main {
     position: relative;
+    padding: 1rem;
     background-color: rgba(0,0,0, 0.60);
 }
 
@@ -274,13 +286,14 @@ video {
     font-weight: 900;
     position: relative;
     color: whitesmoke;
+    margin-top: -8rem;
 }
 
 #page1 h1::before {
     content: "EAT. CODE. ENJOY.";
     position: absolute;
     color: black;
-    top: -6px;
+    top:-6px;
     left: -6px;
     -webkit-text-stroke: 2px #4CAAE4;
     z-index: -1;
