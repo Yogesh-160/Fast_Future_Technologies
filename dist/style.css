@@ -308,7 +308,7 @@ video {
 }
 
 #page1 h1::before {
-    content: "EAT. CODE. ENJOY.";
+    content: "LEARN. CODE. ENJOY.";
     position: absolute;
     color: black;
     top:-6px;
