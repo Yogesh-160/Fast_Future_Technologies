@@ -212,9 +212,9 @@ nav {
     box-shadow: 0 0 0 0 transparent;
     transition: all 0.2s ease-in;
     cursor: none;
-    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
-    backdrop-filter: blur(10px); /* Blur effect */
-    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); 
 }
 
 .login:hover {
