@@ -41,6 +41,9 @@ nav {
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px); 
     -webkit-backdrop-filter: blur(10px); /* Safari support */
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
 }
 
 .logo-container {
@@ -51,13 +54,19 @@ nav {
 
 .logo {
     width: 55px;
+    width: 55px;
     height: auto;
+    margin-left: -1rem;
     margin-left: -1rem;
 }
 
 .logo-text {
     font-size: 18px;
     font-weight: bold;
+    color: whitesmoke;
+    margin-left: -0.5rem;
+    line-height: 1.1rem;
+    text-transform: uppercase;
     color: whitesmoke;
     margin-left: -0.5rem;
     line-height: 1.1rem;
@@ -97,9 +106,11 @@ nav {
 
 .link-item.active .link-icon {
     color: lightblue;
+    color: lightblue;
 }
 
 .link-item .link-icon:hover {
+    color: lightgray;
     color: lightgray;
 }
 
@@ -107,12 +118,14 @@ nav {
     font-size: 12px;
     font-weight: 500;
     color: whitesmoke;
+    color: whitesmoke;
     opacity: 0;
     transition: opacity 0.3s;
 }
 
 .link-item.active .link-text {
     opacity: 1;
+    color: white;
     color: white;
     font-weight: 700;
     font-size: 1rem;
@@ -192,6 +205,8 @@ nav {
     letter-spacing: 2px;
     margin-right: 4rem;
     color: whitesmoke;
+    margin-right: 4rem;
+    color: whitesmoke;
     overflow: hidden;
     box-shadow: 0 0 0 0 transparent;
     transition: all 0.2s ease-in;
@@ -266,6 +281,7 @@ video {
 #main {
     position: relative;
     padding: 1rem;
+    padding: 1rem;
     background-color: rgba(0,0,0, 0.60);
 }
 
@@ -287,12 +303,14 @@ video {
     position: relative;
     color: whitesmoke;
     margin-top: -8rem;
+    margin-top: -8rem;
 }
 
 #page1 h1::before {
     content: "EAT. CODE. ENJOY.";
     position: absolute;
     color: black;
+    top:-6px;
     top:-6px;
     left: -6px;
     -webkit-text-stroke: 2px #4CAAE4;
