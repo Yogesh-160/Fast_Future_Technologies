@@ -1,17 +1,14 @@
 const linkItems = document.querySelectorAll('.link-item');
 
 // Header Scroller Feature
-
-
-let tween = gsap.to(".marquee_part",{
-    xPercent : -100,
-    repeat : -1,
+let tween = gsap.to(".marquee_part", {
+    xPercent: -100,
+    repeat: -1,
     duration: 10,
     ease: 'linear'
 }).totalProgress(0.5);
 
-
-// NavBar ELements Feature
+// NavBar Elements Feature
 linkItems.forEach((linkItem, index) => {
     linkItem.addEventListener("click", () => {
         // Remove active class from all link items
@@ -21,10 +18,34 @@ linkItems.forEach((linkItem, index) => {
         linkItem.classList.add("active");
 
         // Update indicator position
-        const indicator = document.querySelector(".indicator");
-        indicator.style.left = `${linkItem.offsetLeft}px`;
-        indicator.style.width = `${linkItem.offsetWidth}px`;
+        updateIndicator();
     });
+});
+
+const updateIndicator = () => {
+    const activeItem = document.querySelector(".link-item.active");
+    const indicator = document.querySelector(".indicator");
+    if (activeItem) {
+        indicator.style.left = `${activeItem.offsetLeft}px`;
+        indicator.style.width = `${activeItem.offsetWidth}px`;
+    }
+};
+
+// Initial indicator position on page load
+document.addEventListener("DOMContentLoaded", function () {
+    updateIndicator();
+    
+    const navbar = document.querySelector("nav");
+
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 60) { // Change the value to control when the effect starts
+            navbar.classList.add("scrolled");
+        } else {
+            navbar.classList.remove("scrolled");
+        }
+    });
+
+    window.addEventListener("resize", updateIndicator);
 });
 
 // Custom Cursor
@@ -38,18 +59,3 @@ document.addEventListener('mousemove', (e) => {
     cursorBlur.style.top = `${e.clientY}px`;
     cursorBlur.style.left = `${e.clientX}px`;
 });
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    const navbar = document.querySelector("nav");
-
-    window.addEventListener("scroll", function () {
-        if (window.scrollY > 60) { // Change the value to control when the effect starts
-            navbar.classList.add("scrolled");
-        } else {
-            navbar.classList.remove("scrolled");
-        }
-    });
-});
-
-

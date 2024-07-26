@@ -11,6 +11,7 @@
 body {
     height: 100vh;
     padding-top: 120px; 
+    
 }
 
 ::selection {
@@ -31,13 +32,19 @@ nav {
     justify-content: space-between;
     position: fixed;
     top: 60px; 
-    width: 100%; 
+    width: 100vw; 
     height: 60px; 
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    padding: 0 20px;
+    padding: 0 1rem;
     z-index: 999; 
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
 }
 
 .logo-container {
@@ -47,13 +54,18 @@ nav {
 }
 
 .logo {
-    width: 50px;
+    width: 55px;
     height: auto;
+    margin-left: -1.6rem;
 }
 
 .logo-text {
     font-size: 18px;
     font-weight: bold;
+    color: whitesmoke;
+    margin-left: -0.5rem;
+    line-height: 1.1rem;
+    text-transform: uppercase;
 }
 
 .nav-content {
@@ -83,32 +95,31 @@ nav {
 
 .link-icon {
     font-size: 25px;
-    color: #856f6f;
+    color: whitesmoke;
     transition: color 0.3s;
 }
 
 .link-item.active .link-icon {
-    color: var(--icon-color-text);
+    color: lightblue;
 }
 
 .link-item .link-icon:hover {
-    color: var(--icon-color-text);
+    color: lightgray;
 }
 
 .link-text {
     font-size: 12px;
     font-weight: 500;
-    color: #999;
+    color: whitesmoke;
     opacity: 0;
     transition: opacity 0.3s;
 }
 
 .link-item.active .link-text {
     opacity: 1;
-    color: rgba(0, 0, 0, 0.71);
+    color: white;
     font-weight: 700;
     font-size: 1rem;
-   
 }
 
 .indicator {
@@ -117,9 +128,10 @@ nav {
     left: 0;
     height: 3px;
     width: 76px;
-    background-color: var(--icon-color-text);
+    background-color: lightgray;
     box-shadow: 0 0 5px rgba(64, 112, 244, 0.3);
     transition: 0.3s;
+    border-radius: 10px;
 }
 
 /* Search Bar CSS */
@@ -182,12 +194,15 @@ nav {
     text-transform: uppercase;
     font-weight: 800;
     letter-spacing: 2px;
-    background: transparent;
-    color: var(--icon-color-text);
+    margin-right: 4rem;
+    color: whitesmoke;
     overflow: hidden;
     box-shadow: 0 0 0 0 transparent;
     transition: all 0.2s ease-in;
     cursor: none;
+    background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); 
 }
 
 .login:hover {
@@ -254,6 +269,7 @@ video {
 
 #main {
     position: relative;
+    padding: 1rem;
     background-color: rgba(0,0,0, 0.60);
 }
 
@@ -274,13 +290,14 @@ video {
     font-weight: 900;
     position: relative;
     color: whitesmoke;
+    margin-top: -8rem;
 }
 
 #page1 h1::before {
-    content: "EAT. CODE. ENJOY.";
+    content: "LEARN. CODE. ENJOY.";
     position: absolute;
     color: black;
-    top: -6px;
+    top:-6px;
     left: -6px;
     -webkit-text-stroke: 2px #4CAAE4;
     z-index: -1;
@@ -317,170 +334,136 @@ video {
     }
 }
 
-.login:active {
-    box-shadow: 0 0 0 0 transparent;
-    transition: box-shadow 0.2s ease-in;
-}
-/* Responsive Design */
+/* Responsive styles */
 
-/* Extra Small Devices, Phones */
-@media (max-width: 480px) {
+/* For small devices (max-width: 767px) */
+@media (max-width: 767px) {
     .logo {
-        width: 40px;
+        width: 40px; /* Smaller logo */
     }
+    .logo-text {
+        font-size: 14px;
+    }
+    .nav-content {
+        gap: 1rem;
+    }
+    .link-item {
+        height: 50px; /* Smaller height */
+        width: 60px; /* Smaller width */
+    }
+    .link-icon {
+        font-size: 20px; /* Smaller icon */
+    }
+    .link-text {
+        font-size: 10px; /* Smaller text */
+    }
+    .indicator {
+        width: 60px; /* Match link-item width */
+    }
+    .search-login_btn {
+        margin-left: 1rem; /* Reduce margin */
+        gap: 2rem; /* Reduce gap */
+    }
+    .login {
+        padding: 5px 10px; /* Smaller button */
+        font-size: 14px; /* Smaller text */
+    }
+    #page1 h1 {
+        font-size: 80px; /* Smaller font size */
+    }
+    #page1 h2 {
+        font-size: 20px; /* Smaller font size */
+    }
+    #page1 p {
+        font-size: 14px; /* Smaller font size */
+        width: 80%; /* Full width */
+    }
+}
 
+/* For medium devices (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .logo {
+        width: 50px; /* Slightly smaller logo */
+    }
     .logo-text {
         font-size: 16px;
     }
-
+    .nav-content {
+        gap: 1.5rem;
+    }
     .link-item {
-        height: 50px;
-        width: 60px;
+        height: 55px; /* Slightly smaller height */
+        width: 70px; /* Slightly smaller width */
     }
-
     .link-icon {
-        font-size: 20px;
+        font-size: 22px; /* Slightly smaller icon */
     }
-
     .link-text {
-        font-size: 10px;
+        font-size: 11px; /* Slightly smaller text */
     }
-
+    .indicator {
+        width: 70px; /* Match link-item width */
+    }
     .search-login_btn {
-        flex-direction: column;
-        gap: 1rem;
-        margin-left: 0;
-        align-items: flex-start;
-        width: 100%;
+        margin-left: 4rem; /* Adjust margin */
+        gap: 4rem; /* Adjust gap */
     }
-
-    .input {
-        width: 100%;
-        padding: 0 1rem;
+    .login {
+        padding: 8px 16px; /* Slightly smaller button */
+        font-size: 15px; /* Slightly smaller text */
     }
-
-    nav {
-        flex-direction: column;
-        padding: 10px;
-        top: 70px; /* Adjust for smaller screens */
+    #page1 h1 {
+        font-size: 100px; /* Adjust font size */
     }
-
-    .nav-content {
-        flex-direction: column;
-        gap: 1rem;
+    #page1 h2 {
+        font-size: 25px; /* Adjust font size */
+    }
+    #page1 p {
+        font-size: 15px; /* Adjust font size */
+        width: 60%; /* Adjust width */
     }
 }
 
-/* Small Devices, Tablets */
-@media (max-width: 768px) {
-    .search-login_btn {
+/* For large devices (992px to 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .logo {
+        width: 55px; /* Original logo size */
+    }
+    .logo-text {
+        font-size: 18px;
+    }
+    .nav-content {
         gap: 2rem;
-        margin-left: 0;
     }
-
-    .input {
-        padding: 0 2rem;
+    .link-item {
+        height: 60px; /* Original height */
+        width: 76px; /* Original width */
     }
-
-    nav {
-        flex-direction: column;
-        padding: 10px;
-        top: 70px; /* Adjust for smaller screens */
+    .link-icon {
+        font-size: 25px; /* Original icon size */
     }
-
-    .nav-content {
-        flex-direction: column;
-        gap: 1rem;
+    .link-text {
+        font-size: 12px; /* Original text size */
     }
-}
-
-/* Medium Devices, Desktops */
-@media (max-width: 1024px) {
+    .indicator {
+        width: 76px; /* Match link-item width */
+    }
     .search-login_btn {
-        gap: 2rem;
-        margin-left: 0;
+        margin-left: 6rem; /* Adjust margin */
+        gap: 5rem; /* Adjust gap */
     }
-
-    .input {
-        padding: 0 2rem;
+    .login {
+        padding: 10px 20px; /* Original button size */
+        font-size: 16px; /* Original text size */
     }
-
-    nav {
-        flex-direction: column;
-        padding: 10px;
-        top: 70px; /* Adjust for smaller screens */
+    #page1 h1 {
+        font-size: 120px; /* Adjust font size */
     }
-
-    .nav-content {
-        flex-direction: column;
-        gap: 1rem;
+    #page1 h2 {
+        font-size: 30px; /* Adjust font size */
     }
-}
-
-/* Large Devices, Wide Screens */
-@media (max-width: 1200px) {
-    .search-login_btn {
-        gap: 2rem;
-        margin-left: 0;
-    }
-
-    .input {
-        padding: 0 2rem;
-    }
-
-    nav {
-        flex-direction: column;
-        padding: 10px;
-        top: 70px; /* Adjust for smaller screens */
-    }
-
-    .nav-content {
-        flex-direction: column;
-        gap: 1rem;
-    }
-}
-
-/* sidebar menu  */
-.sidebar{
-    position: fixed;
-    top: 0;
-    right:0;
-    height: 100vh;
-    width: 250px;
-    z-index: 999;
-    background-color: rgba(255, 255, 255, 0.255);
-    backdrop-filter: blur(10px);
-    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    float: right;
-}
-
-.sidebar li{
-    width: 100%;
-}
-
-.sidebar a{
-    width: 100%;
-}
-
-.menu-button{
-    display: none;
-}
-
-@media(max-width:480px){
-    .hideONMobile{
-        display: none;
-    }
-    .menu-button{
-        display: block;
-    }
-}
-
-@media(max-width:400px){
-    .sidebar{
-        width: 100%;
+    #page1 p {
+        font-size: 16px; /* Adjust font size */
+        width: 50%; /* Adjust width */
     }
 }
