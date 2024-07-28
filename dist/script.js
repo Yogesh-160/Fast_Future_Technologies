@@ -188,3 +188,14 @@ document.addEventListener("DOMContentLoaded", function () {
     // Initial fetch
     fetchCourses(currentPage);
 });
+
+// sidebar menu
+function showSidebar(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'flex'
+}
+
+function hideSidebar(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'none'
+}
