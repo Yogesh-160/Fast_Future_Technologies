@@ -144,8 +144,8 @@ document.addEventListener("DOMContentLoaded", function () {
             const courseElement = document.createElement('div');
             courseElement.className = 'course';
             courseElement.innerHTML = `
-                <p>${course.description ? truncateDescription(course.description) : 'No Description Available'}</p>
-                <p>${course.levels ? truncateDescription(course.levels) : 'No Description Available'}</p>
+                <p> ${course.description ? truncateDescription(course.description) : 'No Description Available'}</p>
+                <p>Level : ${course.levels ? truncateDescription(course.levels) : 'No Description Available'}</p>
                 <a href="${course.url ? course.url : '#'}" target="_blank">View Course</a>
             `;
             coursesContainer.appendChild(courseElement);
