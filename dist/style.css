@@ -56,7 +56,7 @@ nav {
 .logo {
     width: 55px;
     height: auto;
-    margin-left: -1.6rem;
+    margin-left: -0.5rem;
 }
 
 .logo-text {
@@ -261,7 +261,7 @@ video {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: -1;
@@ -269,12 +269,11 @@ video {
 
 #main {
     position: relative;
-    padding: 1rem;
     background-color: rgba(0,0,0, 0.60);
 }
 
 #page1 {
-    height: 98vh;
+    height: 100vh;
     width: 100%;
     position: relative;
     display: flex;
@@ -290,7 +289,6 @@ video {
     font-weight: 900;
     position: relative;
     color: whitesmoke;
-    margin-top: -8rem;
 }
 
 #page1 h1::before {
@@ -333,6 +331,56 @@ video {
         left: 100%;
     }
 }
+
+#scroller{
+
+    /* background-color: red; */
+    white-space: nowrap;
+    overflow-x:auto ;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+
+}
+
+#scroller::-webkit-scrollbar{
+    display: none;
+}
+#scroller1{
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll;
+    animation-duration: 50s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+#scroller h4{
+    display: inline-block;
+    font-size: 120px;
+    font-weight: 900;
+    font-family:'gilroy';
+    margin-right: 10px;
+    transition: all linear 0.5s;
+    color: transparent;
+    -webkit-text-stroke: 2px #95C11E;
+}
+
+#scroller h4:hover{
+    color: #95C11E;
+}
+
+@keyframes scroll {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+    
+}
+
 
 /* Responsive styles */
 
