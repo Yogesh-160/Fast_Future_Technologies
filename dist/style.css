@@ -628,6 +628,7 @@ color: whitesmoke;
 
 .footer-column a:hover {
     color: #fff;
+    text-decoration: underline;
 }
 
 .footer-bottom {
