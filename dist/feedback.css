@@ -112,3 +112,17 @@ form, p {
       word-break: keep-all;
     }
   }
+
+  /*Styles for the custom cursor */
+.cursor {
+    width: 20px;
+    height: 20px;
+    background-color: #4CAAE4;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 1000;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
+    mix-blend-mode: difference;
+}
