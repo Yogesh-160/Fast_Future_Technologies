@@ -243,20 +243,6 @@ nav {
     mix-blend-mode: difference;
 }
 
-.cursor-blur {
-    width: 90px;
-    height: 90px;
-    background-color: #4CAAE4;
-    border-radius: 50%;
-    position: fixed;
-    pointer-events: none;
-    z-index: 999;
-    transform: translate(-50%, -50%);
-    filter: blur(20px);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
-    mix-blend-mode:difference;
-}
-
 video {
     height: 100%;
     width: 100%;
@@ -569,7 +555,200 @@ color: whitesmoke;
     opacity: 0.5;
     cursor: not-allowed;
 }
+.section-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 70px;
+    background-color: #6B6B6B;
+}
 
+.column {
+    flex: 1;
+    margin: 0 50px;
+}
+
+.column h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+    color: whitesmoke;
+    font-weight: 600;
+}
+
+.column ul {
+    list-style: none;
+    padding: 0;
+    
+}
+
+.column ul li {
+    font-size: 16px;
+    color: whitesmoke;
+    margin-bottom: 8px;
+}
+
+.column ul li:hover{
+    transition: all ease .2s;
+    color: lightblue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.footer-column {
+    flex: 1 1 12%; /* Adjust width as needed */
+    margin: 10px;
+}
+
+.footer-column h4 {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    color: #bbb;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+    transition: color 0.3s;
+}
+
+.footer-column a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid #555;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.social-icons a img {
+    width: 24px;
+    height: 24px;
+}
+
+.certification img {
+    width: 100px; /* Adjust width as needed */
+    height: auto;
+    margin-top: 10px;
+}
+
+.light-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.light-button button.bt {
+    position: relative;
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+    outline: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 0 10px; /* Add margin to space out buttons */
+}
+
+.light-button button.bt .button-holder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 100px;
+    background-color: #0a0a0a;
+    border-radius: 5px;
+    color: #0f0f0f;
+    font-weight: 700;
+    transition: 300ms;
+    outline: #0f0f0f 2px solid;
+    outline-offset: 20;
+}
+
+.light-button button.bt .button-holder svg {
+    height: 50px;
+    fill: #0f0f0f;
+    transition: 300ms;
+}
+
+.light-button button.bt .light-holder {
+    position: absolute;
+    height: 200px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.light-button button.bt .light-holder .dot {
+    position: absolute;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    background-color: #0a0a0a;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.light-button button.bt .light-holder .light {
+    position: absolute;
+    top: 0;
+    width: 200px;
+    height: 200px;
+    clip-path: polygon(50% 0%, 25% 100%, 75% 100%);
+    background: transparent;
+}
+
+.light-button button.bt:hover .button-holder svg {
+    fill: rgba(88, 101, 242, 1);
+}
+
+.light-button button.bt:hover .button-holder {
+    color: rgba(88, 101, 242, 1);
+    outline: rgba(88, 101, 242, 1) 2px solid;
+    outline-offset: 2px;
+}
+
+.light-button button.bt:hover .light-holder .light {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+        180deg,
+        rgba(88, 101, 242, 1) 0%,
+        rgba(255, 255, 255, 0) 75%,
+        rgba(255, 255, 255, 0) 100%
+    );
+}
 
 /* Responsive styles */
 
@@ -634,6 +813,16 @@ color: whitesmoke;
     }
 }
 
+@media (max-width: 768px) {
+    .section-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .column {
+        margin-bottom: 20px;
+    }
+}
 @media (min-width: 768px) and (max-width: 991px) {
     /* Medium devices */
     body {

@@ -109,16 +109,3 @@ body {
     
 }
 
-.cursor-blur {
-    width: 90px;
-    height: 90px;
-    background-color: #4CAAE4;
-    border-radius: 50%;
-    position: fixed;
-    pointer-events: none;
-    z-index: 999;
-    transform: translate(-50%, -50%);
-    filter: blur(20px);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
-    
-}

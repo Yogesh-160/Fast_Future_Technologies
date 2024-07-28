@@ -51,13 +51,9 @@ document.addEventListener("DOMContentLoaded", function () {
 // Custom Cursor
 document.addEventListener('mousemove', (e) => {
     const cursor = document.getElementById('cursor');
-    const cursorBlur = document.getElementById('cursor-blur');
     
     cursor.style.top = `${e.clientY}px`;
     cursor.style.left = `${e.clientX}px`;
-    
-    cursorBlur.style.top = `${e.clientY}px`;
-    cursorBlur.style.left = `${e.clientX}px`;
 });
 document.addEventListener('DOMContentLoaded', function () {
     const apiUrl = 'https://www.googleapis.com/books/v1/volumes?q=free';
