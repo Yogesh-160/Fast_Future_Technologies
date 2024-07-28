@@ -550,144 +550,504 @@ color: whitesmoke;
     background-color: rgb(106, 200, 232);
 }
 
-
-#loading-text {
-    display: none;
-    text-align: center;
-    font-size: 1.5em;
-    color: #333;
+#pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 20px;
+    color: wheat;
 }
+
+#pagination-controls button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: white;
+}
+
+#pagination-controls button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
 /* Responsive styles */
 
-/* For small devices (max-width: 767px) */
+/* General styles for all elements */
 @media (max-width: 767px) {
+    /* Small devices */
+    body {
+        padding-top: 60px;
+    }
+    nav {
+        top: 30px;
+        height: 40px;
+    }
     .logo {
-        width: 40px; /* Smaller logo */
+        width: 30px;
     }
     .logo-text {
-        font-size: 14px;
+        font-size: 12px;
     }
     .nav-content {
         gap: 1rem;
     }
     .link-item {
-        height: 50px; /* Smaller height */
-        width: 60px; /* Smaller width */
+        height: 40px;
+        width: 50px;
     }
     .link-icon {
-        font-size: 20px; /* Smaller icon */
+        font-size: 18px;
     }
     .link-text {
-        font-size: 10px; /* Smaller text */
+        font-size: 10px;
     }
     .indicator {
-        width: 60px; /* Match link-item width */
+        width: 50px;
     }
     .search-login_btn {
-        margin-left: 1rem; /* Reduce margin */
-        gap: 2rem; /* Reduce gap */
+        margin-left: 1rem;
+        gap: 1rem;
     }
     .login {
-        padding: 5px 10px; /* Smaller button */
-        font-size: 14px; /* Smaller text */
+        padding: 5px 10px;
+        font-size: 12px;
     }
     #page1 h1 {
-        font-size: 80px; /* Smaller font size */
+        font-size: 60px;
     }
     #page1 h2 {
-        font-size: 20px; /* Smaller font size */
+        font-size: 18px;
     }
     #page1 p {
-        font-size: 14px; /* Smaller font size */
-        width: 80%; /* Full width */
+        font-size: 12px;
+        width: 90%;
+    }
+    #scroller h4 {
+        font-size: 60px;
+    }
+    #page3 h1, #page4 h1 {
+        font-size: 30px;
+    }
+    .book, .course {
+        width: calc(100% - 20px);
     }
 }
 
-/* For medium devices (768px to 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
+    /* Medium devices */
+    body {
+        padding-top: 80px;
+    }
+    nav {
+        top: 40px;
+        height: 50px;
+    }
     .logo {
-        width: 50px; /* Slightly smaller logo */
+        width: 40px;
     }
     .logo-text {
-        font-size: 16px;
+        font-size: 14px;
     }
     .nav-content {
         gap: 1.5rem;
     }
     .link-item {
-        height: 55px; /* Slightly smaller height */
-        width: 70px; /* Slightly smaller width */
+        height: 50px;
+        width: 60px;
     }
     .link-icon {
-        font-size: 22px; /* Slightly smaller icon */
+        font-size: 20px;
     }
     .link-text {
-        font-size: 11px; /* Slightly smaller text */
+        font-size: 11px;
     }
     .indicator {
-        width: 70px; /* Match link-item width */
+        width: 60px;
     }
     .search-login_btn {
-        margin-left: 4rem; /* Adjust margin */
-        gap: 4rem; /* Adjust gap */
+        margin-left: 2rem;
+        gap: 2rem;
     }
     .login {
-        padding: 8px 16px; /* Slightly smaller button */
-        font-size: 15px; /* Slightly smaller text */
+        padding: 8px 16px;
+        font-size: 14px;
     }
     #page1 h1 {
-        font-size: 100px; /* Adjust font size */
+        font-size: 80px;
     }
     #page1 h2 {
-        font-size: 25px; /* Adjust font size */
+        font-size: 22px;
     }
     #page1 p {
-        font-size: 15px; /* Adjust font size */
-        width: 60%; /* Adjust width */
+        font-size: 14px;
+        width: 70%;
+    }
+    #scroller h4 {
+        font-size: 80px;
+    }
+    #page3 h1, #page4 h1 {
+        font-size: 40px;
+    }
+    .book, .course {
+        width: calc(50% - 20px);
     }
 }
 
-/* For large devices (992px to 1199px) */
 @media (min-width: 992px) and (max-width: 1199px) {
+    /* Large devices */
+    body {
+        padding-top: 100px;
+    }
+    nav {
+        top: 50px;
+        height: 60px;
+    }
     .logo {
-        width: 55px; /* Original logo size */
+        width: 50px;
     }
     .logo-text {
-        font-size: 18px;
+        font-size: 16px;
     }
     .nav-content {
         gap: 2rem;
     }
     .link-item {
-        height: 60px; /* Original height */
-        width: 76px; /* Original width */
+        height: 55px;
+        width: 70px;
     }
     .link-icon {
-        font-size: 25px; /* Original icon size */
+        font-size: 22px;
     }
     .link-text {
-        font-size: 12px; /* Original text size */
+        font-size: 12px;
     }
     .indicator {
-        width: 76px; /* Match link-item width */
+        width: 70px;
     }
     .search-login_btn {
-        margin-left: 6rem; /* Adjust margin */
-        gap: 5rem; /* Adjust gap */
+        margin-left: 4rem;
+        gap: 4rem;
     }
     .login {
-        padding: 10px 20px; /* Original button size */
-        font-size: 16px; /* Original text size */
+        padding: 10px 20px;
+        font-size: 16px;
     }
     #page1 h1 {
-        font-size: 120px; /* Adjust font size */
+        font-size: 100px;
     }
     #page1 h2 {
-        font-size: 30px; /* Adjust font size */
+        font-size: 25px;
     }
     #page1 p {
-        font-size: 16px; /* Adjust font size */
-        width: 50%; /* Adjust width */
+        font-size: 15px;
+        width: 60%;
+    }
+    #scroller h4 {
+        font-size: 100px;
+    }
+    #page3 h1, #page4 h1 {
+        font-size: 50px;
+    }
+    .book, .course {
+        width: calc(33.33% - 20px);
+    }
+}
+
+
+/* Adjust padding-top for different screen sizes */
+@media (max-width: 767px) {
+    body {
+        padding-top: 60px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    body {
+        padding-top: 80px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    body {
+        padding-top: 100px;
+    }
+}
+
+
+/* Adjust navbar for different screen sizes */
+@media (max-width: 767px) {
+    nav {
+        top: 30px;
+        height: 40px;
+    }
+    .logo {
+        width: 30px;
+    }
+    .logo-text {
+        font-size: 12px;
+    }
+    .nav-content {
+        gap: 1rem;
+    }
+    .link-item {
+        height: 40px;
+        width: 50px;
+    }
+    .link-icon {
+        font-size: 18px;
+    }
+    .link-text {
+        font-size: 10px;
+    }
+    .indicator {
+        width: 50px;
+    }
+    .search-login_btn {
+        margin-left: 1rem;
+        gap: 1rem;
+    }
+    .login {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    nav {
+        top: 40px;
+        height: 50px;
+    }
+    .logo {
+        width: 40px;
+    }
+    .logo-text {
+        font-size: 14px;
+    }
+    .nav-content {
+        gap: 1.5rem;
+    }
+    .link-item {
+        height: 50px;
+        width: 60px;
+    }
+    .link-icon {
+        font-size: 20px;
+    }
+    .link-text {
+        font-size: 11px;
+    }
+    .indicator {
+        width: 60px;
+    }
+    .search-login_btn {
+        margin-left: 2rem;
+        gap: 2rem;
+    }
+    .login {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    nav {
+        top: 50px;
+        height: 60px;
+    }
+    .logo {
+        width: 50px;
+    }
+    .logo-text {
+        font-size: 16px;
+    }
+    .nav-content {
+        gap: 2rem;
+    }
+    .link-item {
+        height: 55px;
+        width: 70px;
+    }
+    .link-icon {
+        font-size: 22px;
+    }
+    .link-text {
+        font-size: 12px;
+    }
+    .indicator {
+        width: 70px;
+    }
+    .search-login_btn {
+        margin-left: 4rem;
+        gap: 4rem;
+    }
+    .login {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
+
+
+/* Adjust main content for different screen sizes */
+@media (max-width: 767px) {
+    #page1 h1 {
+        font-size: 60px;
+    }
+    #page1 h2 {
+        font-size: 18px;
+    }
+    #page1 p {
+        font-size: 12px;
+        width: 90%;
+    }
+    #scroller h4 {
+        font-size: 60px;
+    }
+    #page3 h1, #page4 h1 {
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    #page1 h1 {
+        font-size: 80px;
+    }
+    #page1 h2 {
+        font-size: 22px;
+    }
+    #page1 p {
+        font-size: 14px;
+        width: 70%;
+    }
+    #scroller h4 {
+        font-size: 80px;
+    }
+    #page3 h1, #page4 h1 {
+        font-size: 40px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    #page1 h1 {
+        font-size: 100px;
+    }
+    #page1 h2 {
+        font-size: 25px;
+    }
+    #page1 p {
+        font-size: 15px;
+        width: 60%;
+    }
+    #scroller h4 {
+        font-size: 100px;
+    }
+    #page3 h1, #page4 h1 {
+        font-size: 50px;
+    }
+}
+
+
+/* Adjust course and book display for different screen sizes */
+@media (max-width: 767px) {
+    .book, .course {
+        width: calc(100% - 20px);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .book, .course {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .book, .course {
+        width: calc(33.33% - 20px);
+    }
+}
+
+
+/* Adjust custom cursor for different screen sizes */
+@media (max-width: 767px) {
+    .custom-cursor {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .custom-cursor {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .custom-cursor {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    body {
+        padding-top: 120px;
+    }
+    nav {
+        top: 60px;
+        height: 70px;
+    }
+    .logo {
+        width: 60px;
+    }
+    .logo-text {
+        font-size: 18px;
+    }
+    .nav-content {
+        gap: 2.5rem;
+    }
+    .link-item {
+        height: 60px;
+        width: 80px;
+    }
+    .link-icon {
+        font-size: 24px;
+    }
+    .link-text {
+        font-size: 14px;
+    }
+    .indicator {
+        width: 80px;
+    }
+    .search-login_btn {
+        margin-left: 5rem;
+        gap: 5rem;
+    }
+    .login {
+        padding: 12px 24px;
+        font-size: 18px;
+    }
+    #page1 h1 {
+        font-size: 120px;
+    }
+    #page1 h2 {
+        font-size: 30px;
+    }
+    #page1 p {
+        font-size: 16px;
+        width: 50%;
+    }
+    #scroller h4 {
+        font-size: 120px;
+    }
+    #page3 h1, #page4 h1 {
+        font-size: 60px;
+    }
+    .book, .course {
+        width: calc(25% - 20px);
+    }
+    .custom-cursor {
+        width: 40px;
+        height: 40px;
     }
 }

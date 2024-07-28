@@ -113,32 +113,49 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     const coursesContainer = document.getElementById('courses-container');
+    const nextButton = document.getElementById('next-button');
+    const prevButton = document.getElementById('prev-button');
+    const pageInfo = document.getElementById('page-info');
+
+    let currentPage = 1;
+    const coursesPerPage = 9;
+    let totalCourses = 0;
+    let totalPages = 0;
 
     // Fetch courses data from the API
-    fetch('https://api.sampleapis.com/codingresources/codingResources')
-        .then(response => response.json())
-        .then(data => {
-            displayCourses(data);
-        })
-        .catch(error => {
-            console.error('Error fetching courses:', error);
-            coursesContainer.innerHTML = '<p>Failed to load courses. Please try again later.</p>';
-        });
+    function fetchCourses(page) {
+        fetch('https://api.sampleapis.com/codingresources/codingResources')
+            .then(response => response.json())
+            .then(data => {
+                totalCourses = data.length;
+                totalPages = Math.ceil(totalCourses / coursesPerPage);
+                displayCourses(data, page);
+            })
+            .catch(error => {
+                console.error('Error fetching courses:', error);
+                coursesContainer.innerHTML = '<p>Failed to load courses. Please try again later.</p>';
+            });
+    }
 
     // Function to display courses
-    function displayCourses(courses) {
-        courses.forEach(course => {
+    function displayCourses(courses, page) {
+        coursesContainer.innerHTML = '';
+        const start = (page - 1) * coursesPerPage;
+        const end = start + coursesPerPage;
+        const paginatedCourses = courses.slice(start, end);
+
+        paginatedCourses.forEach(course => {
             const courseElement = document.createElement('div');
             courseElement.className = 'course';
             courseElement.innerHTML = `
                 <p>${course.description ? truncateDescription(course.description) : 'No Description Available'}</p>
                 <p>${course.levels ? truncateDescription(course.levels) : 'No Description Available'}</p>
                 <a href="${course.url ? course.url : '#'}" target="_blank">View Course</a>
-
             `;
             coursesContainer.appendChild(courseElement);
         });
-        console.log(courses);
+
+        updatePageInfo(page, totalPages);
     }
 
     // Function to truncate description
@@ -149,5 +166,29 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         return description;
     }
-});
 
+    // Function to update page info
+    function updatePageInfo(currentPage, totalPages) {
+        pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
+        prevButton.disabled = currentPage === 1;
+        nextButton.disabled = currentPage === totalPages;
+    }
+
+    // Event listeners for next and previous buttons
+    nextButton.addEventListener('click', () => {
+        if (currentPage < totalPages) {
+            currentPage++;
+            fetchCourses(currentPage);
+        }
+    });
+
+    prevButton.addEventListener('click', () => {
+        if (currentPage > 1) {
+            currentPage--;
+            fetchCourses(currentPage);
+        }
+    });
+
+    // Initial fetch
+    fetchCourses(currentPage);
+});
