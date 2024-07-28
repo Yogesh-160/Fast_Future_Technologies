@@ -364,11 +364,11 @@ video {
     margin-right: 10px;
     transition: all linear 0.5s;
     color: transparent;
-    -webkit-text-stroke: 2px #95C11E;
+    -webkit-text-stroke: 2px #2980b9;
 }
 
 #scroller h4:hover{
-    color: #95C11E;
+    color: #2980b9;
 }
 
 @keyframes scroll {
@@ -380,8 +380,184 @@ video {
     }
     
 }
+#page3 h1{
+text-align: center;
+font-size: 60px;
+font-weight: 700;
+color: whitesmoke;
+}
+
+#books-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.book {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: calc(25% - 20px); /* 4 cards per row */
+    margin: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* Add this line */
+    display: flex;
+    flex-direction: column;
+}
+
+.book:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.book h3 {
+    font-size: 20px;
+    margin: 15px;
+    color: #333;
+}
+
+.book p {
+    font-size: 14px;
+    margin: 15px;
+    color: #666;
+    height: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.book a {
+    display: block;
+    text-align: center;
+    background-color: rgb(30, 161, 205);
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 0 0 10px 10px;
+    transition: background-color 0.3s ease;
+    position: absolute; /* Add this line */
+    bottom: 0; /* Add this line */
+    width: 100%; /* Add this line */
+}
+
+.book a:hover {
+    background-color: rgb(106, 200, 232);
+}
+
+.book-image img {
+    height: 75%;
+    margin-left: 30%;
+    margin-top: 50px;
+}
+
+.book-details {
+    padding: 15px;
+    text-align: center;
+}
+
+.book-details h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.book-details p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.learn-more {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0 0 10px 10px;
+    transition: background-color 0.3s ease;
+   
+}
+
+.learn-more:hover {
+    background-color: #2980b9;
+}
 
 
+.price {
+    font-size: 1rem;
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+#page4 h1{
+    font-size: 50px;
+    font-weight: 700;
+    color: whitesmoke;
+    text-align: center;
+}
+
+#courses-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.course {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: calc(25% - 20px); /* 4 cards per row */
+    margin: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgb(106, 200, 232);
+}
+
+.course h3 {
+    font-size: 20px;
+    margin: 15px;
+    color: #333;
+}
+
+.course p {
+    font-size: 14px;
+    margin: 15px;
+    color: #666;
+    height: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.course a {
+    display: block;
+    text-align: center;
+    background-color: rgb(30, 161, 205);
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 0 0 10px 10px;
+    transition: background-color 0.3s ease;
+}
+
+.course a:hover {
+    background-color: rgb(106, 200, 232);
+}
+
+
+#loading-text {
+    display: none;
+    text-align: center;
+    font-size: 1.5em;
+    color: #333;
+    margin-top: 20px;
+}
 /* Responsive styles */
 
 /* For small devices (max-width: 767px) */
