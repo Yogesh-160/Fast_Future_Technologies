@@ -6,6 +6,7 @@
     box-sizing: border-box;
     font-family: "Source Sans 3", sans-serif;
     cursor: none;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -481,6 +482,7 @@ color: whitesmoke;
     font-weight: 700;
     color: whitesmoke;
     text-align: center;
+    margin-top: 5rem;
 }
 
 #courses-container {
