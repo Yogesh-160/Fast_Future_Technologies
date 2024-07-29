@@ -1427,3 +1427,71 @@ video {
         width: 100%;
     }
 }
+
+#mobileView img{
+    display: none;
+}
+
+#mobileView {
+    display: none;
+}
+
+@media (max-width:996px) {
+
+
+    #mobileView {
+        display:inline;
+    }
+
+    #mobileView h1{
+        font-weight: 700;
+        color: black;
+        font-size: 25px;
+        text-align: center;
+        background:white;
+    }
+
+#mobileView img{
+    display: inline-block;
+    width: 100vw;
+}
+    footer {
+        display: none;
+    }
+
+    #section-container {
+        display: none;
+    }
+
+    #page4 {
+        display: none;
+    }
+
+    #page3 {
+        display: none;
+    }
+
+    #page2 {
+        display: none;
+    }
+
+    #page1 {
+        display: none;
+    }
+
+    nav {
+        display: none;
+    }
+
+    #video{
+        display: none;
+    }
+
+    .marquee_part{
+        display: none;
+    }
+
+    #marquee{
+        display: none;
+    }
+}
