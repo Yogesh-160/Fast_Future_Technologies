@@ -52,8 +52,8 @@ body {
     z-index: 2;
 }
 
-.input-field .input:focus ~ .label,
-.input-field .input:valid ~ .label {
+.input-field .input:focus~.label,
+.input-field .input:valid~.label {
     top: 5px;
     left: 5px;
     font-size: 12px;
@@ -106,6 +106,5 @@ body {
     z-index: 1000;
     transform: translate(-50%, -50%);
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
-    
-}
 
+}
