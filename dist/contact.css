@@ -1,26 +1,27 @@
 /* Google Font CDN Link */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-*{
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins" , sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .cursor {
-    width: 20px;
-    height: 20px;
-    background-color: #4CAAE4;
-    border-radius: 50%;
-    position: fixed;
-    pointer-events: none;
-    z-index: 1000;
-    transform: translate(-50%, -50%);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
-    mix-blend-mode: difference;
+  width: 20px;
+  height: 20px;
+  background-color: #4CAAE4;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 1000;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
+  mix-blend-mode: difference;
 }
 
-body{
+body {
   min-height: 100vh;
   width: 100%;
   background: #c8e8e9;
@@ -28,19 +29,22 @@ body{
   align-items: center;
   justify-content: center;
 }
-.container{
+
+.container {
   width: 85%;
   background: #fff;
   border-radius: 6px;
   padding: 20px 60px 30px 40px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
-.container .content{
+
+.container .content {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.container .content .left-side{
+
+.container .content .left-side {
   width: 25%;
   height: 100%;
   display: flex;
@@ -50,7 +54,8 @@ body{
   margin-top: 15px;
   position: relative;
 }
-.content .left-side::before{
+
+.content .left-side::before {
   content: '';
   position: absolute;
   height: 70%;
@@ -60,40 +65,48 @@ body{
   transform: translateY(-50%);
   background: #afafb6;
 }
-.content .left-side .details{
+
+.content .left-side .details {
   margin: 14px;
   text-align: center;
 }
-.content .left-side .details i{
+
+.content .left-side .details i {
   font-size: 30px;
   color: #3e2093;
   margin-bottom: 10px;
 }
-.content .left-side .details .topic{
+
+.content .left-side .details .topic {
   font-size: 18px;
   font-weight: 500;
 }
+
 .content .left-side .details .text-one,
-.content .left-side .details .text-two{
+.content .left-side .details .text-two {
   font-size: 14px;
   color: #afafb6;
 }
-.container .content .right-side{
+
+.container .content .right-side {
   width: 75%;
   margin-left: 75px;
 }
-.content .right-side .topic-text{
+
+.content .right-side .topic-text {
   font-size: 23px;
   font-weight: 600;
   color: rgb(61, 106, 255);
 }
-.right-side .input-box{
+
+.right-side .input-box {
   height: 50px;
   width: 100%;
   margin: 12px 0;
 }
+
 .right-side .input-box input,
-.right-side .input-box textarea{
+.right-side .input-box textarea {
   height: 100%;
   width: 100%;
   border: none;
@@ -104,17 +117,21 @@ body{
   padding: 0 15px;
   resize: none;
 }
-.right-side .message-box{
+
+.right-side .message-box {
   min-height: 110px;
 }
-.right-side .input-box textarea{
+
+.right-side .input-box textarea {
   padding-top: 6px;
 }
-.right-side .button{
+
+.right-side .button {
   display: inline-block;
   margin-top: 12px;
 }
-.right-side .button input[type="submit"]{
+
+.right-side .button input[type="submit"] {
   color: #fff;
   font-size: 18px;
   outline: none;
@@ -125,40 +142,47 @@ body{
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.button input[type="submit"]:hover{
+
+.button input[type="submit"]:hover {
   background: rgb(144, 208, 230);
 }
 
 @media (max-width: 950px) {
-  .container{
+  .container {
     width: 90%;
-    padding: 30px 40px 40px 35px ;
+    padding: 30px 40px 40px 35px;
   }
-  .container .content .right-side{
-   width: 75%;
-   margin-left: 55px;
+
+  .container .content .right-side {
+    width: 75%;
+    margin-left: 55px;
+  }
 }
-}
+
 @media (max-width: 820px) {
-  .container{
+  .container {
     margin: 40px 0;
     height: 100%;
   }
-  .container .content{
+
+  .container .content {
     flex-direction: column-reverse;
   }
- .container .content .left-side{
-   width: 100%;
-   flex-direction: row;
-   margin-top: 40px;
-   justify-content: center;
-   flex-wrap: wrap;
- }
- .container .content .left-side::before{
-   display: none;
- }
- .container .content .right-side{
-   width: 100%;
-   margin-left: 0;
- }
+
+  .container .content .left-side {
+    width: 100%;
+    flex-direction: row;
+    margin-top: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .container .content .left-side::before {
+    display: none;
+  }
+
+  .container .content .right-side {
+    width: 100%;
+    margin-left: 0;
+  }
 }
