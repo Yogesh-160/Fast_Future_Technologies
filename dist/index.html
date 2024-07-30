@@ -63,26 +63,22 @@
             <img src="./Images/file.png" <img src="./Images/file.png" alt="Logo" class="logo">
             <p class="logo-text">Fast Future <br> Technologies</p>
         </div>
+        
         <!--sidebar menu-->
-        <ul class="sidebar">
-            <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px"
-                        viewBox="0 -960 960 960" width="26px" fill="#e8eaed">
-                        <path
-                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
-                    </svg></a></li>
+        <ul class="nav-content ">
             <li class="nav-list">
                 <a href="#main" class="link-item active">
                     <i class="ri-home-4-line link-icon"></i>
                     <span class="link-text">Home</span>
                 </a>
             </li>
-            <li class="nav-list">
+            <li class="nav-list ">
                 <a href="#page2" class="link-item">
                     <i class="ri-play-circle-fill link-icon"></i>
                     <span class="link-text">Content</span>
                 </a>
             </li>
-            <li class="nav-list">
+            <li class="nav-list ">
                 <a href="#page4" class="link-item">
                     <i class="ri-book-3-line link-icon"></i>
                     <span class="link-text">Courses</span>
@@ -90,34 +86,6 @@
             </li>
 
             <li class="nav-list">
-                <a href="#section-container" class="link-item">
-                    <i class="ri-user-fill link-icon"></i>
-                    <span class="link-text">Contact</span>
-                </a>
-            </li>
-        </ul>
-        <!--sidebar menu-->
-        <ul class="nav-content hideOnMobile">
-            <li class="nav-list">
-                <a href="#main" class="link-item active">
-                    <i class="ri-home-4-line link-icon"></i>
-                    <span class="link-text">Home</span>
-                </a>
-            </li>
-            <li class="nav-list hideOnMobile">
-                <a href="#page2" class="link-item">
-                    <i class="ri-play-circle-fill link-icon"></i>
-                    <span class="link-text">Content</span>
-                </a>
-            </li>
-            <li class="nav-list hideOnMobile">
-                <a href="#page4" class="link-item">
-                    <i class="ri-book-3-line link-icon"></i>
-                    <span class="link-text">Courses</span>
-                </a>
-            </li>
-
-            <li class="nav-list hideOnMobile">
                 <a href="#section-container" class="link-item">
                     <i class="ri-user-fill link-icon"></i>
                     <span class="link-text">Contact</span>
@@ -125,7 +93,7 @@
             </li>
             <span class="indicator"></span>
         </ul>
-        <div class="search-login_btn hideOnMobile">
+        <div class="search-login_btn">
             <div class="group">
                 <svg viewBox="0 0 24 24" aria-hidden="true" class="icon">
                     <g>
@@ -134,15 +102,15 @@
                         </path>
                     </g>
                 </svg>
-                <input class="input hideOnMobile" type="search" placeholder="Search" />
+                <input class="input" type="search" placeholder="Search" />
             </div>
 
-            <button class="login hideOnMobile" onclick="window.location.href='./loginPage.html'">
+            <button class="login" onclick="window.location.href='./loginPage.html'">
                 Login
             </button>
         </div>
 
-        <li class="menu-button" onclick=showSidebar()>
+        <li class="menu-button" >
             <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px"
                     fill="#e8eaed">
                     <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />

@@ -1413,9 +1413,6 @@ video {
 }
 
 @media(max-width: 767px) {
-    .hideOnMobile {
-        display: none;
-    }
 
     .menu-button {
         display: block;
