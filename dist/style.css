@@ -1441,6 +1441,7 @@ video {
 
     #mobileView {
         display:inline;
+        
     }
 
     #mobileView h1{
@@ -1449,6 +1450,7 @@ video {
         font-size: 25px;
         text-align: center;
         background:white;
+        color: red;
     }
 
 #mobileView img{
@@ -1482,6 +1484,9 @@ video {
     .cursor{
         display: none;
 
+    }
+    .mobileH{
+        width: 100%;
     }
     nav {
         display: none;
