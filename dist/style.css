@@ -1425,7 +1425,7 @@ video {
     }
 }
 
-#mobileView img{
+#mobileView img {
     display: none;
 }
 
@@ -1437,23 +1437,24 @@ video {
 
 
     #mobileView {
-        display:inline;
-        
+        display: inline;
+
     }
 
-    #mobileView h1{
+    #mobileView h1 {
         font-weight: 700;
         color: black;
         font-size: 25px;
         text-align: center;
-        background:white;
+        background: white;
         color: red;
     }
 
-#mobileView img{
-    display: inline-block;
-    width: 100vw;
-}
+    #mobileView img {
+        display: inline-block;
+        width: 100vw;
+    }
+
     footer {
         display: none;
     }
@@ -1478,26 +1479,28 @@ video {
         display: none;
     }
 
-    .cursor{
+    .cursor {
         display: none;
 
     }
-    .mobileH{
+
+    .mobileH {
         width: 100%;
     }
+
     nav {
         display: none;
     }
 
-    #video{
+    #video {
         display: none;
     }
 
-    .marquee_part{
+    .marquee_part {
         display: none;
     }
 
-    #marquee{
+    #marquee {
         display: none;
     }
 }
