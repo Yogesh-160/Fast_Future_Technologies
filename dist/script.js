@@ -1,4 +1,5 @@
 const linkItems = document.querySelectorAll('.link-item');
+const navbarHeight = document.querySelector('nav').offsetHeight;
 
 // Header Scroller Feature
 let tween = gsap.to(".marquee_part", {
@@ -10,12 +11,30 @@ let tween = gsap.to(".marquee_part", {
 
 // NavBar Elements Feature
 linkItems.forEach((linkItem, index) => {
-    linkItem.addEventListener("click", () => {
+    linkItem.addEventListener("click", (event) => {
+        // Prevent default anchor click behavior
+         event.preventDefault(); 
+
         // Remove active class from all link items
         document.querySelectorAll(".link-item.active").forEach(item => item.classList.remove('active'));
 
         // Add active class to the clicked link item
         linkItem.classList.add("active");
+
+         // Scroll to the section
+        const targetId = linkItem.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+
+        if (targetSection) {
+            // Calculate offset position considering the navbar height
+            const offsetPosition = targetSection.offsetTop - navbarHeight;
+
+            // Scroll to the target section smoothly
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }
 
         // Update indicator position
         updateIndicator();
